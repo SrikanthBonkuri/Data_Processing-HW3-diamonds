@@ -11,12 +11,20 @@ You can get the data directly from the [ggplot2 github repo](https://github.com/
 Visualize the relationship between "price" and "carat" and comment on the type of model that 
 might be appropriate for modeling their relationship.
 
+#### Visualization:
+![image](https://user-images.githubusercontent.com/45035308/201222209-1a9b9305-f369-446f-90ed-8115d1432080.png)
+
+
 ## Question 2
 
 Investigate logarithmic transformations to see if you can find a more appropriate relationship
 between "price" and "carat" for univariate linear regression.
 Use data visualization to help justify your choice of model.
 Use explained variance as a metric for model performance.
+
+#### Visualization:
+
+
 
 ## Question 3
 
