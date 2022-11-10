@@ -23,7 +23,7 @@ Use data visualization to help justify your choice of model.
 Use explained variance as a metric for model performance.
 
 #### Visualization:
-
+![image](https://user-images.githubusercontent.com/45035308/201222395-f5b57579-707d-4bca-9898-fb944588e9c8.png)
 
 
 ## Question 3
