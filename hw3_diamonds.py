@@ -8,7 +8,7 @@ import seaborn as sns
 
 df = pd.read_csv('diamonds.csv');
 
-#f = df.plot.scatter("price", "carat")
+#f = df.plot.scatter("carat", "price")
 #fig = f.get_figure()
 #f.get_figure().savefig('figs/Q1_Relationship of carat vs price')
 
@@ -26,7 +26,7 @@ df['log_carat'] = df['carat'].transform(log_function)
 # Show a scatterplot that visualizes the relationship between carat and price
 sns.set_style("whitegrid")
 #reg = sns.regplot(data=df,x='log_price', y='log_carat', line_kws={'color': 'red'}, scatter_kws={'alpha':0.005})
-reg = sns.regplot(data=df,x='log_price', y='log_carat', line_kws={'color': 'red'})
+reg = sns.regplot(data=df,x='log_carat', y='log_price', line_kws={'color': 'red'})
 
 # Title and save
 fig = reg.get_figure()
@@ -37,7 +37,7 @@ reg.get_figure().savefig('figs/Q2_Log_Transformed_Carat_by_Price')
 
 #Q1 Plot
 
-f = df.plot.scatter("price", "carat")
+f = df.plot.scatter("carat", "price")
 fig = f.get_figure()
 f.get_figure().savefig('figs/Q1_Relationship of carat vs price')
 
@@ -46,8 +46,8 @@ f.get_figure().savefig('figs/Q1_Relationship of carat vs price')
 from sklearn.metrics import explained_variance_score
 import statsmodels.api as sm
 
-X = df[['log_price']].copy() # Double square brackets returns the single column dataframe
-y = df['log_carat'].copy() # Will be a numpy type array
+X = df[['log_carat']].copy() # Double square brackets returns the single column dataframe
+y = df['log_price'].copy() # Will be a numpy type array
 
 # Fit regression model
 results = sm.OLS(y, X).fit()
@@ -69,10 +69,11 @@ from sklearn.model_selection import cross_val_score
 print(cross_val_score(linear_regression, X, y, cv=10, scoring="explained_variance").mean())
 
 
-X1 = df['price']
-y1 = df['carat']
+X1 = df['carat']
+y1 = df['price']
 
 results1 = sm.OLS(y1, X1).fit()
+print(results.summary())
 y_pred1 = results.predict(X1)
 explained_variance_score(y_pred1, y1)
 
@@ -100,35 +101,15 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 0)
 
 
-results1 = sm.OLS(y_train1, X_train1).fit()
+# For sklearn.model_selection.train_test_split:
+results = sm.OLS(y_train, X_train).fit() 
+# Inspect the results and inspect R squared to comment on explained variance
+print(results.summary())
 
+# Using simple_train_test_split:
+results1 = sm.OLS(y_train1, X_train1).fit()
 # Inspect the results and inspect R squared to comment on explained variance
 print(results1.summary())
 
 
-results2 = sm.OLS(y_train, X_train).fit()
-
-# Inspect the results and inspect R squared to comment on explained variance
-print(results2.summary())
-
-
-array = np.array(X_train)
-  
-# creating a list of index names
-
-index_values = [0]*37758
-
-for i in range(0,37758):
-    index_values[i]=i
-    
-# creating a list of column names
-column_values = ['carat']
-
-
-df = pd.DataFrame(data = array, 
-                  index = index_values, 
-                  columns = column_values)
-
-
-df['price'] = y_train
 
