@@ -57,6 +57,7 @@ Using `sklearn.model_selection.train_test_split`:
 
 
 Using `simple_train_test_split`:
+
 <img width="519" alt="image" src="https://user-images.githubusercontent.com/45035308/201500739-0663dbbc-c74b-4024-8640-640d6e587293.png">
 
 
