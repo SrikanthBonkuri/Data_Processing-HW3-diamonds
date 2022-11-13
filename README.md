@@ -53,6 +53,7 @@ def simple_train_test_split(X, y, test_size=.3):
 #### Results:
 
 Using `sklearn.model_selection.train_test_split`:
+
 <img width="521" alt="image" src="https://user-images.githubusercontent.com/45035308/201500716-bfd0ffb2-7947-4f9c-b08f-d348fa2344e9.png">
 
 
