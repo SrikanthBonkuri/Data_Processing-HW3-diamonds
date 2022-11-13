@@ -12,7 +12,7 @@ Visualize the relationship between "price" and "carat" and comment on the type o
 might be appropriate for modeling their relationship.
 
 #### Visualization:
-![image](https://user-images.githubusercontent.com/45035308/201222209-1a9b9305-f369-446f-90ed-8115d1432080.png)
+![Q1_Relationship of carat vs price](https://user-images.githubusercontent.com/45035308/201501479-cf2ca704-739a-4830-8f00-c9950bbc8b96.png)
 
 
 ## Question 2
@@ -23,7 +23,7 @@ Use data visualization to help justify your choice of model.
 Use explained variance as a metric for model performance.
 
 #### Visualization:
-![image](https://user-images.githubusercontent.com/45035308/201222395-f5b57579-707d-4bca-9898-fb944588e9c8.png)
+![Q2_Log_Transformed_Carat_by_Price](https://user-images.githubusercontent.com/45035308/201501489-a8be080c-f78f-4762-8f39-e3c4609fcc58.png)
 
 <img width="514" alt="image" src="https://user-images.githubusercontent.com/45035308/201500621-7467a320-51e7-44c9-8065-0b1b73c39ba5.png">
 
