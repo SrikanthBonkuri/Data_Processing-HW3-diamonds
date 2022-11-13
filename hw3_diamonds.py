@@ -8,9 +8,13 @@ import seaborn as sns
 
 df = pd.read_csv('diamonds.csv');
 
-#f = df.plot.scatter("carat", "price")
-#fig = f.get_figure()
-#f.get_figure().savefig('figs/Q1_Relationship of carat vs price')
+f = df.plot.scatter("carat", "price")
+fig = f.get_figure()
+f.get_figure().savefig('figs/Q1_Relationship of carat vs price')
+
+plt.cla()   # Clear axis
+plt.clf()   # Clear figure
+#plt.close() # Close a figure window
 
 
 # Q2.
@@ -34,12 +38,6 @@ fig.subplots_adjust(top=0.925)
 fig.suptitle('Carat by Price (with Logarithmic Transformations)')
 reg.get_figure().savefig('figs/Q2_Log_Transformed_Carat_by_Price')
 
-
-#Q1 Plot
-
-f = df.plot.scatter("carat", "price")
-fig = f.get_figure()
-f.get_figure().savefig('figs/Q1_Relationship of carat vs price')
 
 
 
@@ -110,6 +108,5 @@ print(results.summary())
 results1 = sm.OLS(y_train1, X_train1).fit()
 # Inspect the results and inspect R squared to comment on explained variance
 print(results1.summary())
-
 
 
