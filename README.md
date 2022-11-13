@@ -157,7 +157,7 @@ Notes:
 [1] R² is computed without centering (uncentered) since the model does not contain a constant.
 [2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
-
+ 
 
 ## Question 4
 
