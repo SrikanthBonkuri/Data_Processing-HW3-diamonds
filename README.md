@@ -80,7 +80,6 @@ Explained Variance Score on simple_train_test_split: 0.7178769798196256
   The best score is observed on sklearn selection split model.
   
 
-
 ## Question 4
 
 Use one-hot encoding to find the best 2-input model by adding either "cut", "color" or "clarity" as a second predictor along with "log(carat)" to model "log(price)". Which 2-input model has the best performance? Report the explained variance score and compare to the corresponding univariate model in question 2. What's the shape of the feature matrix for the "best" model?
