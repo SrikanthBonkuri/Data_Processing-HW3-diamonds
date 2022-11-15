@@ -56,7 +56,7 @@ def simple_train_test_split(X, y, test_size=.3):
 
 #### Results:
 
-Using `sklearn.model_selection.train_test_split`:
+* Using `sklearn.model_selection.train_test_split`:
 
 <img width="520" alt="image" src="https://user-images.githubusercontent.com/45035308/201953034-bffe1038-ad69-4a2c-857d-7c4a48b7c3d6.png">
 
@@ -65,7 +65,7 @@ Explained Variance Score on sklearn.model_selection.train_test_split: 0.93382227
 ![Q3_Log_Transformed_Carat_by_Price-sklearn test split](https://user-images.githubusercontent.com/45035308/201953549-cb7c0ceb-01e9-4cd7-9f4e-fc34f326ad0c.png)
 
 
-Using `simple_train_test_split`:
+* Using `simple_train_test_split`:
 
 <img width="513" alt="image" src="https://user-images.githubusercontent.com/45035308/201953425-6cc0a2ec-34c1-4009-a42a-40e5454441c6.png">
 
@@ -85,4 +85,24 @@ Use one-hot encoding to find the best 2-input model by adding either "cut", "col
 
 #### Results:
 
+* Adding "cut" as second predictor:
+
+<img width="469" alt="image" src="https://user-images.githubusercontent.com/45035308/201957271-dca3f6c5-c983-4b4d-868d-264d1ec96037.png">
+
+Explained Variance Score of log_price vs (log_carat, cut): 0.937101149869116
+
+* Adding "color" as second predictor:
+
+<img width="461" alt="image" src="https://user-images.githubusercontent.com/45035308/201958120-64957f7b-d53d-4170-92a7-f92436f23b74.png">
+
+Explained Variance Score of log_price vs (log_carat, color): 0.9453594219733898
+
+* Adding "clarity" as second predictor:
+
+<img width="459" alt="image" src="https://user-images.githubusercontent.com/45035308/201958685-9a4bd951-48c4-4549-a0e4-93fb72141b20.png">
+
+Explained Variance Score of log_price vs (log_carat, clarity): 0.9653665672815918
+
+* The 'cut' feature has 5 categories in it. The 'color' and 'clarity' features had 7 and 8 categories in it respectively.
+* The 2-input model (log_carat, clarity) where 'clarity' as the second predictor has best performance among these.
 
