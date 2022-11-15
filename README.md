@@ -87,11 +87,15 @@ Use one-hot encoding to find the best 2-input model by adding either "cut", "col
 
 * Adding "cut" as second predictor:
 
+Feature Matrix Shape: (53940, 6)
+
 <img width="469" alt="image" src="https://user-images.githubusercontent.com/45035308/201957271-dca3f6c5-c983-4b4d-868d-264d1ec96037.png">
 
 Explained Variance Score of log_price vs (log_carat, cut): 0.937101149869116
 
 * Adding "color" as second predictor:
+
+Feature Matrix Shape: (53940, 8)
 
 <img width="461" alt="image" src="https://user-images.githubusercontent.com/45035308/201958120-64957f7b-d53d-4170-92a7-f92436f23b74.png">
 
@@ -99,10 +103,12 @@ Explained Variance Score of log_price vs (log_carat, color): 0.9453594219733898
 
 * Adding "clarity" as second predictor:
 
+Feature Matrix Shape: (53940, 9)
+
 <img width="459" alt="image" src="https://user-images.githubusercontent.com/45035308/201958685-9a4bd951-48c4-4549-a0e4-93fb72141b20.png">
 
 Explained Variance Score of log_price vs (log_carat, clarity): 0.9653665672815918
 
 * The 'cut' feature has 5 categories in it. The 'color' and 'clarity' features had 7 and 8 categories in it respectively.
-* The 2-input model (log_carat, clarity) where 'clarity' as the second predictor has best performance among these.
+* The 2-input model (log_carat, clarity) with feature matrix shape (53940, 9) has best performance among these.
 
