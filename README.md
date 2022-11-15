@@ -13,9 +13,8 @@ might be appropriate for modeling their relationship.
 
 #### Visualization:
 
+* The relation doesn't seems to be linear. Instead it is the price which is increasing exponentially with carat.
 ![Q1_Relationship of carat vs price](https://user-images.githubusercontent.com/45035308/201501479-cf2ca704-739a-4830-8f00-c9950bbc8b96.png)
-
-The relation doesn't seems to be linear. Instead it is the price which is increasing exponentially with carat.
 
 
 ## Question 2
