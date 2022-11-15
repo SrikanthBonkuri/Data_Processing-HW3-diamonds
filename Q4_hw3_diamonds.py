@@ -48,6 +48,8 @@ final_X.columns = ['log_carat', 'Fair', 'Good', 'Ideal', 'Premium', 'Very Good']
 #view final df
 print(final_X)
 
+print("Feature Matrix Shape: ", final_X.shape)
+
 results = sm.OLS(y, final_X).fit()
 print(results.summary())
 
@@ -78,6 +80,8 @@ final_X1.columns = ['log_carat', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
 #view final df
 print(final_X1)
 
+print("Feature Matrix Shape: ", final_X1.shape)
+
 results1 = sm.OLS(y, final_X1).fit()
 print(results1.summary())
 
@@ -107,6 +111,8 @@ final_X2.columns = ['log_carat', 'I1', 'IF', 'SI1', 'SI2', 'VS1', 'VS2', 'VVS1',
 
 #view final df
 print(final_X2)
+
+print("Feature Matrix Shape: ", final_X2.shape)
 
 results2 = sm.OLS(y, final_X2).fit()
 print(results2.summary())
