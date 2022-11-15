@@ -27,9 +27,13 @@ Use explained variance as a metric for model performance.
 
 <img width="514" alt="image" src="https://user-images.githubusercontent.com/45035308/201500621-7467a320-51e7-44c9-8065-0b1b73c39ba5.png">
 
+Explained Variance Score on Log Transformations: 0.9329893079520857
+
 <img width="514" alt="image" src="https://user-images.githubusercontent.com/45035308/201500659-4445ad3e-2924-4f5c-9d33-330732ba51ee.png">
 
+Explained Variance Score on carat vs price: 0.8493305264354858
 
+* The Logarithmic transformed relationship has best score.
 
 ## Question 3
 
@@ -54,15 +58,31 @@ def simple_train_test_split(X, y, test_size=.3):
 
 Using `sklearn.model_selection.train_test_split`:
 
-<img width="521" alt="image" src="https://user-images.githubusercontent.com/45035308/201500716-bfd0ffb2-7947-4f9c-b08f-d348fa2344e9.png">
+<img width="520" alt="image" src="https://user-images.githubusercontent.com/45035308/201953034-bffe1038-ad69-4a2c-857d-7c4a48b7c3d6.png">
+
+Explained Variance Score on sklearn.model_selection.train_test_split: 0.9338222756481153
+
+![Q3_Log_Transformed_Carat_by_Price-sklearn test split](https://user-images.githubusercontent.com/45035308/201953549-cb7c0ceb-01e9-4cd7-9f4e-fc34f326ad0c.png)
 
 
 Using `simple_train_test_split`:
 
-<img width="519" alt="image" src="https://user-images.githubusercontent.com/45035308/201500739-0663dbbc-c74b-4024-8640-640d6e587293.png">
+<img width="513" alt="image" src="https://user-images.githubusercontent.com/45035308/201953425-6cc0a2ec-34c1-4009-a42a-40e5454441c6.png">
 
+Explained Variance Score on simple_train_test_split: 0.7178769798196256
+
+![Q3_Log_Transformed_Carat_by_Price-simple test split](https://user-images.githubusercontent.com/45035308/201953590-42382032-c340-4299-b9e9-103a9edb9a32.png)
+
+* The simple train test split is biased or has splitted data concentrated towards higher and lower values respectively though the data set.
+  Whereas in sklearn split, it's not biased and training and test set randomly scattered though the dataset.
+  The best score is observed on sklearn selection split model.
+  
 
 
 ## Question 4
 
 Use one-hot encoding to find the best 2-input model by adding either "cut", "color" or "clarity" as a second predictor along with "log(carat)" to model "log(price)". Which 2-input model has the best performance? Report the explained variance score and compare to the corresponding univariate model in question 2. What's the shape of the feature matrix for the "best" model?
+
+#### Results:
+
+
